@@ -1,0 +1,31 @@
+#EXERCISE 1 DATA TYPES
+print((str(two_digit_number[0])), "+", (str(two_digit_number[1])), "=", (int(two_digit_number[0]) + int(two_digit_number[1])))
+print((int(two_digit_number[0]) + int(two_digit_number[1])))
+
+#EXERCISE 2 BMI CALCULATOR
+height = input("enter your height in m: ")
+weight = input("enter your weight in kg: ")
+new_height = (float(height))
+new_weight = (float(weight))
+print(round(new_weight/(new_height*new_height)))
+
+#EXERCISE 3 TIME LEFT UNTIL 90 YEARS OLD CALCULATOR
+age = input("What is your current age? ")
+
+current_age_in_days = int(age) * 365
+current_age_in_weeks = int(age) * 52
+current_age_in_months = int(age) * 12
+
+days_left = int((90 * 365) - current_age_in_days)
+weeks_left = int((90 * 52) - current_age_in_weeks)
+months_left = int((90 * 12) - current_age_in_months)
+print(f"You have:{days_left} days,{weeks_left} weeks, and {months_left} months left.")
+
+#EXERCISE 4 TIP CALCULATOR
+print("Welcome to the tip calculator.")
+total_bill = float(input("What was the total bill? "))
+tip_percentage = float(input("What percentage tip would you like to give? 10, 12 or 15? "))/100+1
+people_to_split = float(input("How many people to split the bill? "))
+
+each_to_pay = round(total_bill*tip_percentage/people_to_split,2)
+print(f"Each person should pay: {each_to_pay}")
