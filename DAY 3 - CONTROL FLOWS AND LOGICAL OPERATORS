@@ -1,0 +1,107 @@
+#EXERCISE 1 ODD OR EVEN?
+
+number = int(input("Which number do you want to check? "))
+
+if number % 2 == 0:
+    print("This is an even number")
+else:
+    print("This is an odd number")
+    
+#EXERCISE 2 BMI CALCULATOR 2.0
+height = float(input("enter your height in m: "))
+weight = float(input("enter your weight in kg: "))
+
+bmi = round(weight/(height*height))
+
+underweight = "are underweight."
+normal_weight = "have a normal weight."
+slightly_overweight = "are slightly overweight."
+obese = "are obese."
+clinically_obese = "are clinically obese."
+
+if bmi < 18.5:
+    bmi_category = underweight
+elif bmi < 25:
+    bmi_category = normal_weight
+elif bmi < 30:
+    bmi_category = slightly_overweight
+elif bmi < 35:
+    bmi_category = obese
+elif bmi > 35:
+    bmi_category = clinically_obese
+
+print(f"Your BMI is {bmi}, you {bmi_category}")
+
+#EXERCISE 3 IS YEAR A LEAP OR NO?
+
+year = int(input("Which year do you want to check? "))
+
+
+if year % 4 != 0:
+    print("Not leap year.")
+elif year % 4 == 0:
+    if year % 100 != 0:
+        print("Leap year.")
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("Leap year.")
+        if year % 400 != 0:
+            print("Not leap year.")
+
+#EXERCISE 4 PIZZA ORDER PRACTICE
+
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+
+pizza_price = 0
+
+if size == "S":
+    pizza_price = 15
+    if add_pepperoni == "Y":
+        pizza_price += 2
+if size == "M":
+    pizza_price = 20
+    if add_pepperoni == "Y":
+        pizza_price += 3
+if size == "L":
+    pizza_price = 25
+    if add_pepperoni == "Y":
+        pizza_price += 3
+
+if extra_cheese == "Y":
+    pizza_price += 1
+
+print(f"Your final bill is ${pizza_price}")
+
+#EXERCISE 5 LOVE CALCULATOR
+
+
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+lower_name1 = name1.lower()
+lower_name2 = name2.lower()
+lower_names = name1.lower() + name2.lower()
+
+count_t = lower_names.count("t")
+count_r = lower_names.count("r")
+count_u = lower_names.count("u")
+count_e = lower_names.count("e")
+count_l = lower_names.count("l")
+count_o = lower_names.count("o")
+count_v = lower_names.count("v")
+
+count_true = count_t+count_r+count_u+count_e
+count_love = count_l + count_o + count_v + count_e
+
+score = str(count_true) + str(count_love)
+
+if int(score) < 10 or int(score) > 90:
+    print(f"Your score is {score}, you go together like coke and mentos.")
+elif 40 < int(score) < 50:
+    print(f"Your score is {score}, you are alright together.")
+else:
+    print(f"Your score is {score}.")
