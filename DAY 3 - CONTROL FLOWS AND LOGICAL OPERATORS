@@ -105,3 +105,20 @@ elif 40 < int(score) < 50:
     print(f"Your score is {score}, you are alright together.")
 else:
     print(f"Your score is {score}.")
+    
+#EXERCISE 6 TREASURE ISLAND
+
+print("Welcome to Treasure Island")
+left_right = input("Left or Right? L R ")
+if left_right == "L":
+    swim_or_wait = input("Swim or wait? S W ")
+    if swim_or_wait == "W":
+        which_door = input("Which door? Blue, red or Yellow? B R Y ")
+        if which_door == "Y":
+            print("You win")
+        else:
+            print("Game over")
+    else:
+        print("You got attacket by trout. Game over")
+else:
+    print("You fall into a hole. Game over")
