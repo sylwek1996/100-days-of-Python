@@ -1,0 +1,23 @@
+#EXERCISE 1 HEADS OR TAILS
+
+import random
+
+random_side = random.randint(0,1)
+if random_side == 0:
+    print("Heads")
+else:
+    print("Tails")
+    
+#EXERCISE 2 RANDOM WHO WILL PAY THE BILL?
+
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+
+import random
+length = len(names)
+random_choice = random.randint(0,length -1)
+person = names[random_choice]
+
+print(f"{person} is going to buy the meal today!")
+
+#EXERCISE 3
