@@ -85,3 +85,73 @@ row = int(position[1])
 map[row -1][column -1] = "X"
 
 print(f"{row1}\n{row2}\n{row3}")
+
+#EXERCISE 4 ROCK,PAPER,SCISSORS
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+user_choice = int(input("Please choose 0 for rock, 1 for paper or 2 for scissors: "))
+
+import random
+pc_choice = random.randint(0,2)
+
+if user_choice == 0:
+    print(rock)
+    if pc_choice == 0:
+        print(rock)
+        print("Draw")
+    if pc_choice == 1:
+        print(paper)
+        print("You loose")
+    if pc_choice == 2:
+        print(scissors)
+        print("You won")
+if user_choice == 1:
+    print(paper)
+    if pc_choice == 0:
+        print(rock)
+        print("You won")
+    if pc_choice == 1:
+        print(paper)
+        print("Draw")
+    if pc_choice == 2:
+        print(scissors)
+        print("You loose")
+if user_choice == 2:
+    print(scissors)
+    if pc_choice == 0:
+        print(rock)
+        print("You loose")
+    if pc_choice == 1:
+        print(paper)
+        print("You won")
+    if pc_choice == 2:
+        print(scissors)
+        print("Draw")
+else:
+    print("You type invalid number")
